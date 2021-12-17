@@ -11,7 +11,7 @@ window.onload = function init(){
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
     
     var renderer = new THREE.WebGLRenderer({antialias: true});
-    renderer.setClearColor(0xffffff);
+    renderer.setClearColor(0x000000);
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
 
@@ -78,6 +78,7 @@ window.onload = function init(){
 
     //배경 - SKYBOX 텍스쳐 적용
     //오류 발생 - CORS 에러 발생
+    /*
     const loader = new THREE.CubeTextureLoader();
     const texture = loader.load([
         "./img/px.png", "./img/nx.png",
@@ -85,6 +86,7 @@ window.onload = function init(){
         "./img/pz.png", "./img/nz.png"
     ]);
     scene.background = texture;
+    */
 
     //마우스를 이용한 시점 변경
     var controls = new THREE.OrbitControls(camera, renderer.domElement);
