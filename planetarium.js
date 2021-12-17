@@ -30,7 +30,7 @@ window.onload = function init(){
 
     //기준(지구) 객체
     var earth_geo = new THREE.SphereGeometry(1,1,1);
-    var earth_mat = new THREE.MeshBasicMaterial({color: 0xffff00, opacity: 0.0, transparent: true});
+    var earth_mat = new THREE.MeshBasicMaterial({color: 0xffff00, opacity: 0.0, transparent: true}); //투명하게 조정
     var earth = new THREE.Mesh(earth_geo, earth_mat);
     system.add(earth);
     objects_1.push(earth);
@@ -77,7 +77,7 @@ window.onload = function init(){
     }
 
     //배경 - SKYBOX 텍스쳐 적용
-    //오류 발생
+    //오류 발생 - CORS 에러 발생
     const loader = new THREE.CubeTextureLoader();
     const texture = loader.load([
         "./img/px.png", "./img/nx.png",
